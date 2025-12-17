@@ -14,25 +14,31 @@
 
   <div class="mb-3">
     <label>Name</label>
-    <input type="text" name="name" class="form-control">
+    <input type="text" name="name" class="form-control" value="{{ data.name }}">
+    <small class="text-danger">{{ errors.name }}</small>
   </div>
 
   <div class="mb-3">
     <label>Mobile</label>
-    <input type="text" name="mobile" class="form-control">
+    <input type="text" name="mobile" class="form-control" value="{{ data.mobile }}">
+    <small class="text-danger">{{ errors.mobile }}</small>
   </div>
 
   <div class="mb-3">
     <label>Message</label>
-    <textarea class="form-control" name="message"></textarea>
+    <textarea class="form-control" name="message" value="{{ data.message }}"></textarea>
+    <small class="text-danger">{{ errors.message }}</small>
   </div>
 
   <div class="mb-3">
     <label>Photo</label>
     <input type="file" name="photo" class="form-control">
+    <small class="text-danger">{{ errors.photo }}</small>
   </div>
 
   <button class="btn btn-success">Save</button>
+  <a href="/" class="btn btn-dark">Back</a>
+  
 </form>
 
 </body>
